@@ -1,0 +1,5 @@
+curl -F "file=@1.txt" http://127.0.0.1:5000/update
+curl http://127.0.0.1:5000/files
+wget http://127.0.0.1:5000/get/test.txt
+curl -F "file=@testdoc.docx" http://127.0.0.1:5000/update -o 123.docx
+url -F "file=@1" -F "file=@2" http://127.0.0.1:5000/upload-multiple
