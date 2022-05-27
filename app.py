@@ -24,7 +24,7 @@ def index():
             pdf = open(docx.name[:-5] + ".pdf", "rb")
             mem = io.BytesIO(pdf.read())
             mem.seek(0)
-            return send_file(mem, as_attachment=True, attachment_filename=f.name[:-5] + ".pdf")
+            return send_file(mem, as_attachment=True, attachment_filename=f.filename[:-5] + ".pdf")
         finally:
             docx.close()
             os.remove(docx.name[:-5] + ".pdf")
@@ -42,7 +42,7 @@ def upload_file():
         pdf = open(docx.name[:-5] + ".pdf", "rb")
         mem = io.BytesIO(pdf.read())
         mem.seek(0)
-        return send_file(mem, as_attachment=True, attachment_filename=f.name[:-5] + ".pdf")
+        return send_file(mem, as_attachment=True, attachment_filename=f.filename[:-5] + ".pdf")
     finally:
         docx.close()
         os.remove(docx.name[:-5] + ".pdf")
