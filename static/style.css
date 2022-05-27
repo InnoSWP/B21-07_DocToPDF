@@ -1,0 +1,14 @@
+html, body {
+    margin:0px;
+    height:100%;
+}
+
+.content {
+    margin: 5px 10%;
+    background-color: rgb(248, 249, blue);
+    height:100%;
+}
+
+.index__content_holder { 
+    margin-left: 100px;
+}
