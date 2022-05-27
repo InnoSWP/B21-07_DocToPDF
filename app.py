@@ -1,10 +1,10 @@
 import os
 from werkzeug.utils import secure_filename
-from supporting import get_files_names
+from supporting import get_files_names, convert
 
 from flask import Flask, request, jsonify, send_from_directory
 
-from docx2pdf import convert
+# from docx2pdf import convert
 
 app = Flask(__name__)
 
@@ -23,10 +23,12 @@ def get_files():
 def upload_file():
     f = request.files['file']
     f.save(f'docx/{f.filename}')
-    convert(f'docx/{f.filename}', f'pdf/{f.name}.pdf')
+    convert(f'docx/{f.filename}', f'pdf/')
 
     # return jsonify({'message': 'File successfully uploaded'})
-    return send_from_directory("pdf", f'{f.name}.pdf', as_attachment=True)
+    # os.system(f"open {f.name}.pdf")
+    filename_without_extention = f.filename.split('.')[0]
+    return send_from_directory("pdf", f'{filename_without_extention}.pdf', as_attachment=True)
 
 
 # curl -F "file=@1" -F "file=@2" http://127.0.0.1:5000/upload-multiple
@@ -47,4 +49,4 @@ def get_file(filename):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=5000)
