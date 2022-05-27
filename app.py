@@ -4,6 +4,8 @@ from supporting import get_files_names, convert
 
 from flask import Flask, request, jsonify, send_from_directory
 
+from time import time
+
 # from docx2pdf import convert
 
 app = Flask(__name__)
@@ -23,8 +25,9 @@ def get_files():
 def upload_file():
     f = request.files['file']
     f.save(f'docx/{f.filename}')
+    a = time()
     convert(f'docx/{f.filename}', f'pdf/')
-
+    print("Consumed time: ", time() - a)
     # return jsonify({'message': 'File successfully uploaded'})
     # os.system(f"open {f.name}.pdf")
     filename_without_extention = f.filename.split('.')[0]
@@ -41,12 +44,6 @@ def upload_multiple():
         print(sec_name)
         file.save(f"files/{sec_name}")
     return jsonify({'message': 'Files successfully uploaded'})
-
-
-@app.route("/get/<filename>", methods=["GET"])
-def get_file(filename):
-    return send_from_directory("files", filename, as_attachment=True)
-
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
