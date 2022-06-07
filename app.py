@@ -1,7 +1,10 @@
+from crypt import methods
 import io
 import os
 import subprocess
 import tempfile
+
+import json
 
 from werkzeug.utils import secure_filename
 from flask import Flask, request, jsonify, send_file, render_template
@@ -31,6 +34,13 @@ def index():
             
 @app.route('/api/convertDocx', methods=["POST"])
 def upload_file():
+    args = request.args
+    if "apiKey" not in args: 
+        return {"message" : "Wrong api key"}, 403
+    
+    if args["apiKey"] != app.config["apiKey"]:
+        return {"message" : "Wrong api key"}, 403
+
     f = request.files['file']
     docx = tempfile.NamedTemporaryFile(suffix=".docx", delete=True)
     try:
@@ -48,6 +58,19 @@ def upload_file():
         os.remove(docx.name[:-5] + ".pdf")
 
 
+@app.route("/test", methods=["GET", "POST"])
+def test():
+    args = request.args
+    if "apiKey" not in args: 
+        return {"message" : "Wrong api key"}, 403
+    
+    if app.config["apiKey"] == args["apiKey"]:
+        return "Access permitted"
+    else: 
+        return "Access denied"
+    return request.args
+
+
 # curl -F "file=@1" -F "file=@2" http://127.0.0.1:5000/upload-multiple
 @app.route('/api/upload-multiple', methods=["POST"])
 def upload_multiple():
@@ -61,4 +84,10 @@ def upload_multiple():
 
 
 if __name__ == '__main__':
+    with open("config.json") as config_file:
+        config_data = json.load(config_file)
+    
+    app.config.update(config_data)
+    # print(app.config)
+    print("Api key:", app.config["apiKey"])
     app.run(debug=True, port=5000)
