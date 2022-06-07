@@ -11,6 +11,11 @@ from flask import Flask, request, jsonify, send_file, render_template
 
 app = Flask(__name__)
 
+def check_file_extention(file_name: str) -> bool:
+    allowed_extentions = app.config["UPLOAD_EXTENSIONS"]
+    extention = file_name[file_name.rfind('.'):]
+    return extention in allowed_extentions
+
 @app.route('/', methods=["POST", "GET"])
 def index(): 
     if request.method == "GET":
@@ -42,6 +47,10 @@ def upload_file():
         return {"message" : "Wrong api key"}, 403
 
     f = request.files['file']
+    
+    if not check_file_extention(f.filename):
+        return {"message" : "Document conversion error"}, 500
+
     docx = tempfile.NamedTemporaryFile(suffix=".docx", delete=True)
     try:
         pdf = open(docx.name[:-5] + ".pdf", "w")
@@ -86,8 +95,8 @@ def upload_multiple():
 if __name__ == '__main__':
     with open("config.json") as config_file:
         config_data = json.load(config_file)
-    
     app.config.update(config_data)
-    # print(app.config)
+    print(app.config)
+    # UPLOAD_EXTENSIONS
     print("Api key:", app.config["apiKey"])
     app.run(debug=True, port=5000)
