@@ -1,4 +1,5 @@
 {
     "apiKey" : "ur38r839u2f8ioejfnndh3wifh3892fyh389f", 
-    "UPLOAD_EXTENSIONS": [".docx", ".xls", "jpeg"]
+    "UPLOAD_EXTENSIONS": [".docx", ".doc", ".xls", ".xlsx", "jpeg"]
 }
+
