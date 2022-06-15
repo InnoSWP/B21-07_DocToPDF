@@ -1,6 +1,6 @@
 <h1 align="center">InnoConvert project</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h1 align="center">Innopolis sum 2022</a> 
+<h1 align="center">Innopolis Summer 2022</a> 
 
 ___
 ### About:
