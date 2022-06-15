@@ -1,4 +1,3 @@
-from crypt import methods
 import io
 import os
 import subprocess
@@ -32,9 +31,14 @@ def index():
             docx.flush()
             subprocess.run(
                 ["soffice", "--headless", "--convert-to", "pdf", docx.name, "--outdir", os.path.dirname(pdf.name)])
-            pdf = open(docx.name[:-5] + ".pdf", "rb")
+            try:
+                pdf = open(docx.name[:-5] + ".pdf", "rb")
+            except FileNotFoundError as e:
+                return {"message": "Document conversion error"}, 500
             mem = io.BytesIO(pdf.read())
             mem.seek(0)
+            if mem.getbuffer().nbytes == 0:
+                return {"message": "Document conversion error"}, 500
             return send_file(mem, as_attachment=True, attachment_filename=f.filename[:-5] + ".pdf")
         finally:
             docx.close()
@@ -63,9 +67,14 @@ def upload_file():
         docx.flush()
         subprocess.run(
             ["soffice", "--headless", "--convert-to", "pdf", docx.name, "--outdir", os.path.dirname(pdf.name)])
-        pdf = open(docx.name[:-5] + ".pdf", "rb")
+        try:
+            pdf = open(docx.name[:-5] + ".pdf", "rb")
+        except FileNotFoundError as e:
+            return {"message": "Document conversion error"}, 500
         mem = io.BytesIO(pdf.read())
         mem.seek(0)
+        if mem.getbuffer().nbytes == 0:
+            return {"message": "Document conversion error"}, 500
         return send_file(mem, as_attachment=True, attachment_filename=f.filename[:-5] + ".pdf")
     finally:
         docx.close()
