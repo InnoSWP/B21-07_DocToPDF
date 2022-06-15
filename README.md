@@ -4,7 +4,7 @@
 
 ___
 #### About:
-Our customer wants to convert doc, exel filess to pdf using our converter in order to put electronic signatures on documents. 
+Customer started to do electronic documents management. Therefore, they needed to have some programs for this. One of the wishes was to put an electronic signature in the documents. For the correct visualization of the signature into the document, they needed to convert the document from doc to pdf. What is more, PDF is the guarantee that the original file is not edited. However, customer could not use third party services due to information security.
 
 #### Team
 Anton Nekhaev - Back-end developer
