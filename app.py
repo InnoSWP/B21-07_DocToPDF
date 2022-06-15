@@ -57,6 +57,7 @@ def upload_file():
         pdf = open(docx.name[:-5] + ".pdf", "w")
         pdf.close()
         f.save(docx)
+        docx.flush()
         subprocess.run(
             ["soffice", "--headless", "--convert-to", "pdf", docx.name, "--outdir", os.path.dirname(pdf.name)])
         pdf = open(docx.name[:-5] + ".pdf", "rb")
