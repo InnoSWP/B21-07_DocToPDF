@@ -13,3 +13,7 @@ Valeriia Kharina - TechWriter
 Karina Denisova - Tester
 Roman Voronov - Back-end developer 
 Vladimir Surikov - Back-end developer, Security engineer
+
+### Interface
+it is a local application, then the interface is through the command line. 
+Also it have a version of a web application, then the interface is a REST API.
