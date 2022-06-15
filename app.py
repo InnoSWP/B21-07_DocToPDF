@@ -11,13 +11,15 @@ from flask import Flask, request, jsonify, send_file, render_template
 
 app = Flask(__name__)
 
+
 def check_file_extention(file_name: str) -> bool:
     allowed_extentions = app.config["UPLOAD_EXTENSIONS"]
     extention = file_name[file_name.rfind('.'):]
     return extention in allowed_extentions
 
+
 @app.route('/', methods=["POST", "GET"])
-def index(): 
+def index():
     if request.method == "GET":
         return render_template("index.html")
     elif request.method == "POST":
@@ -37,26 +39,28 @@ def index():
         finally:
             docx.close()
             os.remove(docx.name[:-5] + ".pdf")
-            
+
+
 @app.route('/api/convertDocx', methods=["POST"])
 def upload_file():
     args = request.args
-    if "apiKey" not in args: 
-        return {"message" : "Wrong api key"}, 403
-    
+    if "apiKey" not in args:
+        return {"message": "Wrong api key"}, 403
+
     if args["apiKey"] != app.config["apiKey"]:
-        return {"message" : "Wrong api key"}, 403
+        return {"message": "Wrong api key"}, 403
 
     f = request.files['file']
-    
+
     if not check_file_extention(f.filename):
-        return {"message" : "Document conversion error"}, 500
+        return {"message": "Document conversion error"}, 500
 
     docx = tempfile.NamedTemporaryFile(suffix=".docx", delete=True)
     try:
         pdf = open(docx.name[:-5] + ".pdf", "w")
         pdf.close()
         f.save(docx)
+        docx.flush()
         subprocess.run(
             ["soffice", "--headless", "--convert-to", "pdf", docx.name, "--outdir", os.path.dirname(pdf.name)])
         pdf = open(docx.name[:-5] + ".pdf", "rb")
@@ -71,12 +75,12 @@ def upload_file():
 @app.route("/test", methods=["GET", "POST"])
 def test():
     args = request.args
-    if "apiKey" not in args: 
-        return {"message" : "Wrong api key"}, 403
-    
+    if "apiKey" not in args:
+        return {"message": "Wrong api key"}, 403
+
     if app.config["apiKey"] == args["apiKey"]:
         return "Access permitted"
-    else: 
+    else:
         return "Access denied"
     return request.args
 
