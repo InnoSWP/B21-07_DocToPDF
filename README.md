@@ -8,10 +8,15 @@ Customer started to do electronic documents management. Therefore, they needed t
 
 ### Team
 Anton Nekhaev - Back-end developer
+
 Elina Akimchenkova - Teamlead
+
 Valeriia Kharina - TechWriter
+
 Karina Denisova - Tester
+
 Roman Voronov - Back-end developer 
+
 Vladimir Surikov - Back-end developer, Security engineer
 
 ### Interface
