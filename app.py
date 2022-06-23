@@ -105,12 +105,10 @@ def upload_multiple():
         file.save(f"files/{sec_name}")
     return jsonify({'message': 'Files successfully uploaded'})
 
-
-if __name__ == '__main__':
-    with open("config.json") as config_file:
-        config_data = json.load(config_file)
-    app.config.update(config_data)
-    print(app.config)
-    # UPLOAD_EXTENSIONS
-    print("Api key:", app.config["apiKey"])
-    app.run(debug=True, port=5000)
+with open("config.json") as config_file:
+    config_data = json.load(config_file)
+app.config.update(config_data)
+print(app.config)
+# UPLOAD_EXTENSIONS
+print("Api key:", app.config["apiKey"])
+app.run(debug=True, port=5000)
