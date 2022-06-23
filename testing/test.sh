@@ -24,6 +24,7 @@ if [[ $http_code -eq 200 ]]; then
     else
         echo "[-] Test for sending good file"
         exit 1
+    fi
 else
     echo "[-] Test for sending good file"
     exit 1
