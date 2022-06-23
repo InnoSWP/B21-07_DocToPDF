@@ -111,4 +111,5 @@ app.config.update(config_data)
 print(app.config)
 # UPLOAD_EXTENSIONS
 print("Api key:", app.config["apiKey"])
-app.run(debug=True, port=5000)
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
