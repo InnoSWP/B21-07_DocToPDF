@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Conerting testing
 
 # Controls when the workflow will run
 on:
@@ -29,9 +29,11 @@ jobs:
           python-version: "3.9.13"
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Install requirements 
         run: pip install -r requirements.txt
       
+      - name: Install libreoffice
+        run: sudo apt install libreoffice
             # Runs a single command using the runners shell
       - name: Run server
         # run: python -m flask run
