@@ -23,7 +23,9 @@ Vladimir Surikov - Back-end developer, Security engineer
 it is a local application, then the interface is through the command line. 
 Also it have a version of a web application, then the interface is a REST API.
 
-## Setup project
+## Deployment
+
+### Setup project
 
 1. Clone the repository
 
@@ -39,8 +41,15 @@ chmod +x setup.sh start.sh
 ./setup.sh
 ```
 
-## Run the project
+### Run the project
 Just use the start.sh script
 ```bash 
 ./start.sh
+```
+### Using docker
+You can build and run our project with docker:
+```bash
+git clone https://github.com/InnoSWP/B21-07_DocToPDF
+docker build -t doc2pdf .
+docker run -p 5000:5000 doc2pdf
 ```
