@@ -25,3 +25,25 @@ Also it have a version of a web application, then the interface is a REST API.
 
 ### Minimal capacity
 1000 files per minute
+
+## Setup project
+
+1. Clone the repository
+
+2. Open the directory of the project
+
+2. Give executable ability to execute the setup and start script
+``` bash
+chmod +x setup.sh start.sh
+```
+
+3. Install the required packages, libraries, add fonts, and configure the virtual environment for python
+```bash 
+./setup.sh
+```
+
+## Run the project
+Just use the start.sh script
+```bash 
+./start.sh
+```
