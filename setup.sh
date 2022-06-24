@@ -2,7 +2,7 @@
 echo "Undate apts"
 sudo apt-get update
 echo "Install python3"
-sudo apt-get install python3
+sudo apt-get -y install python3
 echo "Install pip3"
 sudo apt-get -y install python3-pip
 echo "Setup virtual environment"
