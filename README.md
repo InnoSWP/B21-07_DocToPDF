@@ -23,9 +23,6 @@ Vladimir Surikov - Back-end developer, Security engineer
 it is a local application, then the interface is through the command line. 
 Also it have a version of a web application, then the interface is a REST API.
 
-### Minimal capacity
-1000 files per minute
-
 ## Setup project
 
 1. Clone the repository
