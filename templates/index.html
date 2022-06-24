@@ -2,11 +2,12 @@
 {% block content %}
 <div class="index__content_holder">
     <h2>On this page you can convert you docx file to  pdf</h2>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" action="/api/convertDocx">
         <div class="form-group">
           <label for="exampleFormControlFile1">Place for you docx</label>
           <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
           <button type="submit" class="btn btn-primary">Submit</button>
+          <input type="hidden" name="apiKey">ur38r839u2f8ioejfnndh3wifh3892fyh389f</input>
         </div>
     </form>
 </div>
