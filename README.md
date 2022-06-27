@@ -1,17 +1,16 @@
-<h1 align="center">InnoConvert project</a> 
+<h1 align="center">InnoConvert project 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h1 align="center">Innopolis Summer 2022</a> 
+<h1 align="center">Innopolis Summer 2022</h1> 
 
 ___
-### About:
+## Project description
 Customer started to do electronic documents management. Therefore, they needed to have some programs for this. One of the wishes was to put an electronic signature in the documents. For the correct visualization of the signature into the document, they needed to convert the document from doc or xls to pdf. What is more, PDF is the guarantee that the original file is not edited. However, customer could not use third party services due to information security.
 
-### Interface
-it is a local application, then the interface is through the command line. 
-Also it have a version of a web application, then the interface is a REST API.
+## Demo
 
-## Deployment
 
+## How to use
+This is an API for converting files and to use it you need firstly install the project and then run. steps for installation and running are following ➡️ 
 ### Setup project
 
 1. Clone the repository
@@ -40,6 +39,22 @@ git clone https://github.com/InnoSWP/B21-07_DocToPDF
 docker build -t doc2pdf .
 docker run -p 5000:5000 doc2pdf
 ```
+
+## Features
+
+| Feature                                      | Suppirted | 
+|----------------------------------------------|:---------:|
+| converting .doc files                        |     ✅     |
+| converting .xls files                        |     ✅     |
+| sending multiple files                       |     ✅     |
+| converting with different languages texts    |     ✅     |
+| converting of files with different encodings |     ✅     |
+| returning status codes                       |     ✅     |
+
+
+## Interface
+it is a local application, then the interface is through the command line.
+Also it have a version of a web application, then the interface is a REST API.
 
 ### Team
 Anton Nekhaev - Back-end developer
