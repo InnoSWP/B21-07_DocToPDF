@@ -8,6 +8,8 @@ Customer started to do electronic documents management. Therefore, they needed t
 
 ## 💿 Demo 
 
+![Teaser](https://i.imgur.com/RKDEVjB.gif)
+
 
 ## 🧷 How to use
 This is an API for converting files and to use it you need firstly install the project and then run. steps for installation and running are following ➡️ 
@@ -42,7 +44,7 @@ docker run -p 5000:5000 doc2pdf
 
 ## ✏️ Features
 
-| Feature                                      | Suppirted | 
+| Feature                                      | Supported | 
 |----------------------------------------------|:---------:|
 | converting .doc files                        |     ✅     |
 | converting .xls files                        |     ✅     |
