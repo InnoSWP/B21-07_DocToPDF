@@ -44,7 +44,7 @@ docker run -p 5000:5000 doc2pdf
 
 ## ✏️ Features
 
-| Feature                                      | Suppirted | 
+| Feature                                      | Supported | 
 |----------------------------------------------|:---------:|
 | converting .doc files                        |     ✅     |
 | converting .xls files                        |     ✅     |
