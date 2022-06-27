@@ -7,7 +7,9 @@ ___
 Customer started to do electronic documents management. Therefore, they needed to have some programs for this. One of the wishes was to put an electronic signature in the documents. For the correct visualization of the signature into the document, they needed to convert the document from doc or xls to pdf. What is more, PDF is the guarantee that the original file is not edited. However, customer could not use third party services due to information security.
 
 ## 💿 Demo 
-
+```
+![Teaser](https://i.imgur.com/RKDEVjB.gif)
+```
 
 ## 🧷 How to use
 This is an API for converting files and to use it you need firstly install the project and then run. steps for installation and running are following ➡️ 
