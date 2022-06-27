@@ -43,15 +43,14 @@ docker run -p 5000:5000 doc2pdf
 
 ### Team
 Anton Nekhaev - Back-end developer
-
+[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/anekhaev)
 Elina Akimchenkova - Teamlead
-
+[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/akmchnkv)
 Valeriia Kharina - TechWriter
-
+[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/exemplerie)
 Karina Denisova - Tester
-
+[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/karinadenisova)
 Roman Voronov - Back-end developer 
-
+[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/porludom)
 Vladimir Surikov - Back-end developer, Security engineer
-
-[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://web.telegram.org/k/#@anekhaev)
+[<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/MasterLogick)
