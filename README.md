@@ -51,6 +51,9 @@ docker run -p 5000:5000 doc2pdf
 | converting of files with different encodings |     ✅     |
 | returning status codes                       |     ✅     |
 
+## 🔧 Technology
+This is progect on python. To convert files we use LibreOffice.
+
 
 ## 📱 Interface 
 it is a local application, then the interface is through the command line.
