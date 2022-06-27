@@ -46,7 +46,7 @@ docker run -p 5000:5000 doc2pdf
 |----------------------------------------------|:---------:|
 | converting .doc files                        |     ✅     |
 | converting .xls files                        |     ✅     |
-| sending multiple files                       |     ✅     |
+| sending multiple files                       |     ❌     |
 | converting with different languages texts    |     ✅     |
 | converting of files with different encodings |     ✅     |
 | returning status codes                       |     ✅     |
