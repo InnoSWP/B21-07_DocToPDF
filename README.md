@@ -56,6 +56,8 @@ docker run -p 5000:5000 doc2pdf
 it is a local application, then the interface is through the command line.
 Also it have a version of a web application, then the interface is a REST API.
 
+## Support the team
+
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com)
 
 ### Team
