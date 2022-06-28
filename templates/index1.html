@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+{% block content %}
+<div class="index__content_holder">
+    <h2>On this page you can convert you docx file to  pdf</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Place for you docx</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
