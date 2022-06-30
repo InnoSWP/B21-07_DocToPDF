@@ -40,4 +40,4 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Run servertest
-        run: pytest -s servertest.py
+        run: pytest -s test.py
