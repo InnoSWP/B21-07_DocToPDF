@@ -39,5 +39,5 @@ jobs:
         run: python -m flask run > /dev/null 1&> /dev/null  2&> /dev/null &
         
       # Runs a set of commands using the runners shell
-      - name: Run pytest
-        run: pytest -s test.py
+      - name: Run servertest
+        run: pytest -s servertest.py
