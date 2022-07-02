@@ -52,7 +52,7 @@ docker run -p 5000:5000 doc2pdf
 | converting with different languages texts    |     ✅     |
 | converting of files with different encodings |     ✅     |
 | returning status codes                       |     ✅     |
-| 550 converted files per minuet |✅ |
+| 100 converted files per minuet |✅ |
 
 ## 📱 Interface 
 it is a local application, then the interface is through the command line.
