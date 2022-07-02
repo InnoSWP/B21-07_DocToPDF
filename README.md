@@ -89,5 +89,5 @@ This is progect on python. To convert files we use LibreOffice.
 
 ![OS Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
+![licence](https://img.shields.io/github/license/{NAD777}/{B21-07_DocToPDF}.svg)
 
