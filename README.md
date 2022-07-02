@@ -51,7 +51,7 @@ docker run -p 5000:5000 doc2pdf
 | converting with different languages texts    |     ✅     |
 | converting of files with different encodings |     ✅     |
 | returning status codes                       |     ✅     |
-| 100 converted files per minuet               |     ✅     |
+| 100 converted files per minute               |     ✅     |
 | sending multiple files in zip archive        |     ❌     |
 
 
