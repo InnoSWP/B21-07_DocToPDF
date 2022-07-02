@@ -53,10 +53,6 @@ docker run -p 5000:5000 doc2pdf
 | converting of files with different encodings |     ✅     |
 | returning status codes                       |     ✅     |
 
-## 🔧 Technology
-This is progect on python. To convert files we use LibreOffice.
-
-
 ## 📱 Interface 
 it is a local application, then the interface is through the command line.
 Also it have a version of a web application, then the interface is a REST API.
@@ -89,3 +85,11 @@ Roman Voronov - Back-end developer
 Vladimir Surikov - Back-end developer, Security engineer
 
 [<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/MasterLogick)
+
+
+## 🔧 Technology
+This is progect on python. To convert files we use LibreOffice.
+![OS Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+
