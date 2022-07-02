@@ -59,6 +59,9 @@ Also it have a version of a web application, then the interface is a REST API.
 
 
 ### 🕵🏻 Team
+
+![GitHub Contributors Image](https://contrib.rocks/image?repo=InnoSWP/B21-07_DocToPDF)
+
 Anton Nekhaev - Back-end developer
 
 [<img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white">](https://t.me/anekhaev)
@@ -89,5 +92,4 @@ This is progect on python. To convert files we use LibreOffice.
 
 ![OS Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![GitHub Contributors Image](https://contrib.rocks/image?repo=InnoSWP/B21-07_DocToPDF)
 
