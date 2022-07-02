@@ -98,10 +98,6 @@ This is progect on python. To convert files we use LibreOffice.
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/InnoSWP/B21-07_DocToPDF/blob/main/LICENSE)
 
-we chose the mit license because:
-- licenses are not "copyleft"
-- since there is no copyright for this license, other groups have the right to use and modify it to suit their own purposes
-- expressly states the rights of the end user, including the rights to use, copy, modify, include in other source code, publish, distribute, sublicense and / or sell the licensed software
-- the license is considered an academic license, that is, it is recognized as suitable for use in the field of scientific development
+MIT License gives everybody rights to do any actions like using the software, copying, modifying, selling the copies etc. However, there is one restriction: any copies or substantial portions of the software must include the original copyright notice and permission notice. What is more, MIT License is free to extend (like Free Software Foundation did). Finally, software with MIT License provided without any warranties.
 
 
